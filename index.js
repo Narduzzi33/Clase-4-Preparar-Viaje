@@ -20,6 +20,9 @@ function listoParaViajar(preparativos) {
     }
   }
   
+  console.log(listoParaViajar(preparativos));
+
+
 //Ejercicio 3
 let aAgregar = {requisito: "vacunas Necesarias", valor: true}
 preparativos.push(aAgregar);
@@ -37,3 +40,5 @@ const objetoACambiar = preparativos.find(objeto => objeto.requisito === "transpo
 objetoACambiar.valor = false;
 console.log(preparativos)
 
+//Ejercicio 6
+console.log(listoParaViajar(preparativos));
