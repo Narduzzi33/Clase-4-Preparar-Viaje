@@ -20,9 +20,6 @@ function listoParaViajar(preparativos) {
     }
   }
   
-  console.log(listoParaViajar(preparativos));
-
-
 //Ejercicio 3
 let aAgregar = {requisito: "vacunas Necesarias", valor: true}
 preparativos.push(aAgregar);
@@ -33,3 +30,10 @@ console.log(preparativos)
 const index = preparativos.findIndex(objeto => objeto.requisito === "seguro de viaje");
 preparativos.splice(index, 1);
 console.log(preparativos)
+
+
+//Ejercicio 5
+const objetoACambiar = preparativos.find(objeto => objeto.requisito === "transporte confirmado");3
+objetoACambiar.valor = false;
+console.log(preparativos)
+
