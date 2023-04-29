@@ -7,11 +7,14 @@ const preparativos = [
     {requisito: "cambio de moneda", valor: false},
 ]
 
+//Ejercicio 2
 function listoParaViajar(preparativos) {
+    //fitramos los no listos
     const faltantes = preparativos.filter((preparativo) => !preparativo.valor);
     if (faltantes.length === 0) {
       return "Estás listo para viajar!";
     } else {
+    //A faltantes le pasamos un map que va a serpara el requisito unicamente y lo unimos con un join para imprimirlo
       const requisitosFaltantes = faltantes.map((preparativo) => preparativo.requisito).join(", ");
       return `Te faltan los siguientes requisitos: ${requisitosFaltantes}.`;
     }
@@ -19,6 +22,14 @@ function listoParaViajar(preparativos) {
   
   console.log(listoParaViajar(preparativos));
 
+
+//Ejercicio 3
 let aAgregar = {requisito: "vacunas Necesarias", valor: true}
 preparativos.push(aAgregar);
+console.log(preparativos)
+
+//Ejercicio 4
+//El findIndex actual como el filter, solo que trae el index del elemento
+const index = preparativos.findIndex(objeto => objeto.requisito === "seguro de viaje");
+preparativos.splice(index, 1);
 console.log(preparativos)
